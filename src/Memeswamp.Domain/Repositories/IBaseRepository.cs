@@ -9,10 +9,10 @@ namespace Memeswamp.Domain.Repositories
 {
     public interface IBaseRepository<T, K> where T : BaseModel<K>
     {
-        Task<T> GetById(K id);
+        Task<T?> GetById(K id);
         Task<List<T>> GetAll();
-        Task<T> Create(T entity);
-        Task<T> Update(T entity);
-        Task<T> Delete(K id);
+        Task<T?> Create(T entity);
+        Task<T?> Update(T entity);
+        Task<T?> Delete(K id);
     }
 }
