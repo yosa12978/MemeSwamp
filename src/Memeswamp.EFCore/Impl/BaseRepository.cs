@@ -11,7 +11,7 @@ namespace Memeswamp.EFCore.Impl
 {
     public class BaseRepository<T, K> where T : BaseModel<K>
     {
-        private readonly DatabaseContext _db;
+        protected readonly DatabaseContext _db;
         public BaseRepository(DatabaseContext db) 
         {
             _db = db;
